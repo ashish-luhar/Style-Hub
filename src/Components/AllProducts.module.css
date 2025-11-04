@@ -1,0 +1,409 @@
+/* AllProducts.module.css */
+
+.allProductsSection {
+  padding: 60px 0;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.allProductsTitle {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.categoryFilter {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.categoryBtn {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.categoryBtn:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.activeCategory {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.productCard {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(44,62,80,0.08);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 380px;
+  cursor: pointer;
+}
+
+.productCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(44,62,80,0.15);
+}
+
+.productImageContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.productCard:hover .productImage {
+  transform: scale(1.05);
+}
+
+.wishlistBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ccc;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.wishlistBtn:hover {
+  background: rgba(255, 255, 255, 1);
+  color: #ff6b6b;
+  transform: scale(1.1);
+}
+
+.wishlistActive {
+  color: #ff6b6b !important;
+}
+
+.productInfo {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.productName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.3;
+}
+
+.productDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.productRating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stars {
+  font-size: 14px;
+}
+
+.reviewCount {
+  font-size: 12px;
+  color: #666;
+  margin-left: 4px;
+}
+
+.productPrice {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4CAF50;
+  font-family: 'Poppins', sans-serif;
+}
+
+.addToCartBtn {
+  width: 100%;
+  background: white;
+  color: #2c3e50;
+  border: 2px solid #2c3e50;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: auto;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.addToCartBtn:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .productsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  
+  .allProductsTitle {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .categoryFilter {
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .categoryBtn {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+  
+  .productCard {
+    height: 400px;
+  }
+  
+  .productImageContainer {
+    height: 180px;
+  }
+  
+  .productInfo {
+    padding: 14px;
+  }
+  
+  .productName {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  
+  .productPrice {
+    font-size: 1.1rem;
+  }
+  
+  .addToCartBtn {
+    padding: 10px 12px;
+    font-size: 12px;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 850px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0 16px;
+  }
+  
+  .productCard {
+    height: 380px;
+  }
+  
+  .productImageContainer {
+    height: 170px;
+  }
+  
+  .productInfo {
+    padding: 12px;
+  }
+  
+  .productName {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+  
+  .productPrice {
+    font-size: 1rem;
+  }
+  
+  .addToCartBtn {
+    padding: 8px 10px;
+    font-size: 11px;
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 700px) {
+  .allProductsSection {
+    padding: 40px 0;
+  }
+  
+  .allProductsTitle {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+  
+  .categoryFilter {
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .categoryBtn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 15px;
+  }
+  
+  .productCard {
+    height: 320px;
+  }
+  
+  .productImageContainer {
+    height: 160px;
+  }
+  
+  .productInfo {
+    padding: 12px;
+  }
+  
+  .productName {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  
+  .productPrice {
+    font-size: 1.1rem;
+  }
+  
+  .addToCartBtn {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Updated mobile styles for 2 cards per row and reduced height */
+@media (max-width: 600px) {
+  .productsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+  }
+  
+  .productCard {
+    height: auto;
+    min-height: 280px;
+    box-shadow: 0 4px 12px rgba(44,62,80,0.05);
+  }
+  
+  .productImageContainer {
+    height: 140px;
+  }
+  
+  .productInfo {
+    padding: 10px;
+  }
+  
+  .productName {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .productPrice {
+    font-size: 1rem;
+  }
+
+  .productDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    margin-bottom: 8px;
+  }
+
+  .productRating {
+    margin-bottom: 0;
+  }
+  
+  .addToCartBtn {
+    padding: 8px;
+    font-size: 11px;
+    border-radius: 16px;
+  }
+  
+  .wishlistBtn {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,199 @@
+.checkoutPage {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #7b6eea 0%, #6a5acd 100%);
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .checkoutHeader {
+    width: 90%;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 18px 18px 0 0;
+    padding: 20px 32px;
+    box-shadow: 0 8px 24px rgba(80, 70, 180, 0.08);
+    margin-bottom: 0;
+  }
+  
+  .logo {
+    height: 80px;
+  }
+  
+  .checkoutTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #5a4fcf;
+    letter-spacing: 1px;
+  }
+  
+  .addressForm {
+    width: 90%;
+    max-width: 900px;
+    background: white;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 8px 24px rgba(80, 70, 180, 0.08);
+    padding: 24px 32px;
+    margin-bottom: 24px;
+  }
+  
+  .formSection {
+    margin-bottom: 24px;
+  }
+  
+  .formSection h2 {
+    font-size: 1.2rem;
+    color: #5a4fcf;
+    margin-bottom: 8px;
+  }
+  
+  .formSection h3 {
+    font-size: 1rem;
+    /* color: #2c225a; */
+    margin-bottom: 8px;
+  }
+  
+  .autoFillPrompt {
+    color: #7b6eea;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+  
+  .hintText {
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+
+  }.countrySelect select{
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border: 1.5px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #666;
+    transition: border 0.2s;
+    background-color: #f8f9fa;
+  }
+  .countrySelect select input{
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border: 1.5px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #666;
+    transition: border 0.2s;
+    background-color: #f8f9fa;
+  }
+  
+  
+  .formInput {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border: 1.5px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #666;
+    transition: border 0.2s;
+    background-color: #f8f9fa;
+  }
+  
+  .formInput:focus {
+    border-color: #7b6eea;
+    outline: none;
+  }
+  
+  .formSelect {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    /* border: 1.5px solid #bdb6f7; */
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #2c225a;
+    background-color: white;
+    transition: border 0.2s;
+  }
+  
+  .formSelect:focus {
+    border-color: #7b6eea;
+    outline: none;
+  }
+  
+  .checkboxLabel {
+    display: flex;
+    align-items: center;
+    color: #2c225a;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  
+  .checkboxInput {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    accent-color: #7b6eea;
+  }
+  
+  .formTextarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid #bdb6f7;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #2c225a;
+    min-height: 80px;
+    resize: vertical;
+    transition: border 0.2s;
+  }
+  
+  .formTextarea:focus {
+    border-color: #7b6eea;
+    outline: none;
+  }
+  
+  .formActions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .submitButton {
+    background: linear-gradient(135deg, #7b6eea 0%, #6a5acd 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(80, 70, 180, 0.08);
+  }
+  
+  .submitButton:hover {
+    background: linear-gradient(135deg, #6a5acd 0%, #7b6eea 100%);
+  }
+  
+  @media (max-width: 700px) {
+    .checkoutHeader, .addressForm {
+      width: 98%;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    
+    .checkoutHeader {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    
+    .addressForm {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }

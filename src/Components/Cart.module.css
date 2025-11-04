@@ -1,0 +1,250 @@
+.cartPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #7b6eea 0%, #6a5acd 100%);
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartHeader {
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 18px 18px 0 0;
+  padding: 20px 32px;
+  box-shadow: 0 8px 24px rgba(80, 70, 180, 0.08);
+  margin-bottom: 0;
+}
+
+.logo {
+  height: 80px;
+}
+
+.cartTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #5a4fcf;
+  letter-spacing: 1px;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #7b6eea;
+  cursor: pointer;
+  transition: color 0.2s;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.closeBtn:hover {
+  background: #f3f0ff;
+  color: #d32f2f;
+}
+
+.cartList {
+  width: 90%;
+  max-width: 900px;
+  background: white;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 8px 24px rgba(80, 70, 180, 0.08);
+  padding: 24px 32px 16px 32px;
+  margin-bottom: 24px;
+}
+
+.emptyCart {
+  text-align: center;
+  color: #888;
+  font-size: 1.2rem;
+  padding: 40px 0;
+}
+
+.cartItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  border-bottom: 1px solid #eee;
+  padding: 18px 0;
+  position: relative;
+}
+
+.cartItem:last-child {
+  border-bottom: none;
+}
+
+.itemImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(80, 70, 180, 0.08);
+}
+
+.itemInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.itemName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c225a;
+}
+
+.itemOptions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.sizeSelect, .colorSelect {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1.5px solid #bdb6f7;
+  background: #f6f4ff;
+  color: #5a4fcf;
+  font-weight: 500;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.sizeSelect:focus, .colorSelect:focus {
+  border: 1.5px solid #7b6eea;
+}
+
+.itemPriceQty {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.itemPrice {
+  font-size: 1.1rem;
+  color: #7b6eea;
+  font-weight: 600;
+}
+
+.qtyControl {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f6f4ff;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.qtyBtn {
+  background: #7b6eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.qtyBtn:hover {
+  background: #5a4fcf;
+}
+
+.qty {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c225a;
+  min-width: 24px;
+  text-align: center;
+}
+
+.itemTotal {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  color: #d32f2f;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 12px;
+  transition: color 0.2s;
+  align-self: flex-start;
+}
+.removeBtn:hover {
+  color: #b71c1c;
+}
+
+.cartFooter {
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 8px 24px rgba(80, 70, 180, 0.08);
+  padding: 18px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c225a;
+}
+
+.cartTotal {
+  color: #7b6eea;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.checkoutBtn {
+  background: linear-gradient(135deg, #7b6eea 0%, #6a5acd 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(80, 70, 180, 0.08);
+}
+.checkoutBtn:hover {
+  background: linear-gradient(135deg, #6a5acd 0%, #7b6eea 100%);
+}
+
+@media (max-width: 700px) {
+  .cartHeader, .cartList, .cartFooter {
+    width: 98%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .cartHeader, .cartFooter {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .cartList {
+    padding-top: 12px;
+    padding-bottom: 8px;
+  }
+  .cartItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .itemImage {
+    width: 60px;
+    height: 60px;
+  }
+}

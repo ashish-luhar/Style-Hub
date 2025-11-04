@@ -1,0 +1,547 @@
+/* src/Components/Payment.module.css */
+
+.paymentPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #7b6eea 0%, #6a5acd 100%);
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  gap: 24px;
+}
+
+.paymentDetails {
+  flex: 2;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(80, 70, 180, 0.08);
+  padding-bottom: 24px;
+}
+
+.paymentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  height: 80px;
+}
+
+.paymentTitle {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: #5a4fcf;
+  letter-spacing: 1px;
+}
+
+.paymentContent {
+  padding: 24px 32px;
+}
+
+.deliverySection {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.deliverySection h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c225a;
+  margin-bottom: 4px;
+}
+
+.deliverySection p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.changeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  color: #7b6eea;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.paymentMethodSection {
+  margin-top: 24px;
+}
+
+.paymentMethodSection h3 {
+  font-size: 1rem;
+  color: #2c225a;
+  margin-bottom: 16px;
+}
+
+.paymentOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.paymentOption {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.paymentOption:hover {
+  background-color: #f9f9ff;
+  border-color: #7b6eea;
+}
+
+.paymentOption input[type="radio"] {
+  accent-color: #7b6eea;
+  margin-top: 4px;
+}
+
+.paymentOption label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  font-weight: 500;
+  color: #2c225a;
+}
+
+.radioLabel {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.unavailable {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.balanceInfo {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+.balanceInfo a,
+.codInfo a {
+  color: #7b6eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cardLogos {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.cardLogos img {
+  height: 24px;
+  object-fit: contain;
+}
+
+.codInfo {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+.orderSummary {
+  flex: 1;
+}
+
+.summaryBox {
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(80, 70, 180, 0.08);
+  padding: 24px;
+}
+
+.usePaymentBtn {
+  width: 100%;
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);
+  margin-bottom: 16px;
+}
+
+.summaryCalculation {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+.craditBtn {
+  width: 19vw;
+  height: 6vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.2);
+  margin-top: 30px;
+  margin-right: 12px;
+}
+.netBankingSelect {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border: 1.5px solid #bdb6f7;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2c225a;
+  background-color: white;
+  transition: border 0.2s;
+  margin-top: 30px;
+}
+
+.freeDelivery {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.orderTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c225a;
+}
+
+.reviewOrderBtn {
+  width: 100%;
+  background: linear-gradient(135deg, #7b6eea 0%, #6a5acd 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(80, 70, 180, 0.08);
+}
+
+.reviewOrderBtn:hover {
+  background: linear-gradient(135deg, #6a5acd 0%, #7b6eea 100%);
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .paymentDetails {
+    order: 2;
+  }
+  .orderSummary {
+    order: 1;
+  }
+
+  /* Adjustments for mobile UPI view */
+  .upiInputContainer {
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: stretch; /* Stretch items to full width */
+  }
+
+  .upiInput {
+    width: 100%; /* Make input take full width */
+    margin-bottom: 10px; /* Add some space below the input */
+  }
+
+  .verifyBtn {
+    width: 100%; /* Make button take full width */
+    margin-left: 0; /* Remove left margin on mobile */
+  }
+}
+
+/* New styles for the popup */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.popupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.popupTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c225a;
+  margin: 0;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.closeBtn:hover {
+  color: #333;
+}
+
+.popupBody {
+  padding: 30px;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.inputGroup label {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.inputGroupDate {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+.dateField {
+  flex: 1;
+}
+.dateField label {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.dateInputs {
+  display: flex;
+  gap: 10px;
+}
+
+.dateInputs select {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+  color: black;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23666" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9ff;
+  border-left: 3px solid #7b6eea;
+  border-radius: 4px;
+}
+
+.popupCardLogos {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.popupCardLogos img {
+  height: 30px;
+  object-fit: contain;
+}
+
+.popupFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  padding: 20px 30px;
+  border-top: 1px solid #eee;
+}
+
+.cancelBtn {
+  background: #f1f1f1;
+  color: #555;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cancelBtn:hover {
+  background: #e0e0e0;
+}
+
+.continueBtn {
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.continueBtn:hover {
+  background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.inputGroup input {
+  background-color: #f8f9fa;
+  color: black;
+}
+
+.upiDetails {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #f0e6da;
+}
+
+.upiTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2c225a;
+  margin-bottom: 10px;
+}
+
+.upiInputContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.upiInput {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa; /* Ensure it matches other inputs */
+  color: black;
+}
+
+.verifyBtn {
+  padding: 10px 20px;
+  background-color: #f1f1f1; /* Default disabled-like color */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: #555;
+  font-weight: 600;
+  cursor: not-allowed;
+  transition: background-color 0.2s, color 0.2s, cursor 0.2s;
+}
+
+.verifyBtnActive {
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  color: white;
+  border-color: #ff9800; /* Border color for active state */
+  cursor: pointer;
+}
+
+.verifyBtnActive:hover {
+  background: linear-gradient(135deg, #ff9800 0%, #ffc107 100%); /* Slightly darker hover for active */
+}
+
+.upiFormat {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0;
+}

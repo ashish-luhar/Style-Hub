@@ -1,0 +1,415 @@
+.profileContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profileCard {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.profileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #f8f9fa;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profilePicture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #667eea;
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.userName {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.verifiedBadge {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.verifiedBadge i {
+  font-size: 0.7rem;
+}
+
+.userEmail {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.headerActions {
+  display: flex;
+  gap: 12px;
+}
+
+.copyLinkBtn, .editProfileBtn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.copyLinkBtn {
+  background: #f8f9fa;
+  color: #667eea;
+  border: 2px solid #e9ecef;
+}
+
+.copyLinkBtn:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.editProfileBtn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.editProfileBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+/* Form Section */
+.profileForm {
+  margin-bottom: 40px;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.formLabel {
+  display: block;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.formInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+  font-family: 'Poppins', sans-serif;
+  background: white;
+  color: black;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.formInput:disabled {
+  background: #f8f9fa;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.validIcon {
+  position: absolute;
+  right: 12px;
+  color: #4CAF50;
+  font-size: 1.1rem;
+}
+
+/* Profile Picture Section */
+.profilePictureSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profilePictureThumbnail {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #667eea;
+}
+
+.profilePictureActions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.uploadBtn, .deleteBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.uploadBtn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.uploadBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.deleteBtn {
+  background: #dc3545;
+  color: white;
+}
+
+.deleteBtn:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.fileInfo {
+  color: #666;
+  font-size: 0.8rem;
+  margin: 8px 0 0 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  border-top: 2px solid #f8f9fa;
+}
+
+.deleteAccountBtn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.deleteAccountBtn:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.formActions {
+  display: flex;
+  gap: 12px;
+}
+
+.cancelBtn, .saveBtn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.cancelBtn {
+  background: white;
+  color: #666;
+  border: 2px solid #e9ecef;
+}
+
+.cancelBtn:hover {
+  background: #f8f9fa;
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.saveBtn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.saveBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profileContainer {
+    padding: 20px 15px;
+  }
+  
+  .profileCard {
+    padding: 30px 20px;
+  }
+  
+  .profileHeader {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .headerActions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .copyLinkBtn, .editProfileBtn {
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .userName {
+    font-size: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .verifiedBadge {
+    align-self: flex-start;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+  
+  .deleteAccountBtn {
+    order: 2;
+  }
+  
+  .formActions {
+    order: 1;
+    justify-content: space-between;
+  }
+  
+  .cancelBtn, .saveBtn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .profileCard {
+    padding: 20px 15px;
+  }
+  
+  .profileInfo {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .profilePicture {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .userName {
+    font-size: 1.3rem;
+  }
+  
+  .headerActions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .copyLinkBtn, .editProfileBtn {
+    width: 100%;
+  }
+  
+  .profilePictureSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .profilePictureActions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .uploadBtn, .deleteBtn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
